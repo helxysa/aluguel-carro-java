@@ -18,7 +18,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("API de Aluguel de Carros")
-                        .description("Sistema para gerenciar carros e aluguéis. Desenvolvido por Helxysa.")
+                        .description("Sistema para gerenciar carros e aluguéis")
                         .version("1.0")
                         .contact(new Contact()
                                 .name("Helxysa")
