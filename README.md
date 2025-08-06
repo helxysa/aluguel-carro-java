@@ -1,13 +1,23 @@
 # Sistema de Locadora de Carros - Spring Boot
 
-## O que faz
+![Java](https://img.shields.io/badge/Java-21-orange?style=flat&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.4-brightgreen?style=flat&logo=spring)
+![H2 Database](https://img.shields.io/badge/Database-H2-blue?style=flat&logo=h2)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
 
-Sistema RESTful em Spring Boot para gerenciar aluguel de carros:
+Sistema RESTful em Spring Boot para gerenciar aluguel de carros com interface web moderna e API REST completa.
+
+## 📋
+<details>
+<summary><strong>Sobre o Sistema</strong></summary>
+
+### O que faz
 - Cadastra veículos com modelo, valor e disponibilidade
 - Controla aluguéis com cálculo automático de valores
 - Interface web moderna + API REST
 
-## Regras Básicas
+### Regras Básicas
 
 **Carros:**
 - Status: "Disponível" ou "Indisponível"
@@ -20,14 +30,65 @@ Sistema RESTful em Spring Boot para gerenciar aluguel de carros:
 - Valor total = (Dias + 1) × Valor diária
 - Carro fica indisponível quando alugado
 
-## Tecnologias
-
+### Tecnologias
 - Java 21 + Spring Boot 3.5.4
 - Banco H2 (em memória)
 - Frontend: HTML + Tailwind CSS + JavaScript
 - Arquitetura: MVC + Repository Pattern
 
-## API Endpoints
+</details>
+
+<details>
+<summary><strong>Como Iniciar</strong></summary>
+
+### Pré-requisitos
+- Java 21+ instalado
+- Git
+
+### Execução
+```bash
+# 1. Clonar projeto
+git clone https://github.com/helxysa/aluguel-carro-java.git
+cd aluguel-carro-java
+
+# 2. Executar
+./mvnw spring-boot:run     # Linux/Mac
+# ou
+mvnw.cmd spring-boot:run   # Windows
+```
+
+### Acessar
+- **Interface Web**: http://localhost:8080/
+- **API**: http://localhost:8080/api/carros
+- **Documentação (Swagger)**: http://localhost:8080/swagger-ui.html
+
+### Fluxo de Teste
+1. Acesse a interface web
+2. Cadastre alguns carros na aba "Carros"
+3. Crie aluguéis na aba "Aluguéis" 
+4. Veja os cálculos automáticos
+5. Finalize aluguéis para liberar carros
+
+### Banco de Dados (H2)
+- URL: `jdbc:h2:mem:testdb`
+- Usuário: `sa`
+- Senha: (vazia)
+
+</details>
+
+<details>
+<summary><strong>🖥️ Interface do Sistema</strong></summary>
+
+### Tela de Carros
+![Gestão de Carros](src/public/img/carros.png)
+
+### Tela de Aluguéis
+![Gestão de Aluguéis](src/public/img/aluguel.png)
+
+</details>
+
+<details>
+<summary><strong>🔗 API Endpoints</strong></summary>
 
 ### Carros (`/api/carros`)
 - `GET /carros` - Listar todos
@@ -42,50 +103,10 @@ Sistema RESTful em Spring Boot para gerenciar aluguel de carros:
 - `PUT /alugueis/finalizar/{id}` - Finalizar
 - `GET /alugueis/disponibilidade/{carroId}` - Verificar disponibilidade
 
-## Como Testar (Desenvolvimento)
+</details>
 
-### Pré-requisitos
-- Java 21+ instalado
-- Git
-
-### Execução
-```bash
-# 1. Clonar projeto
-git clone <url-do-repositorio>
-cd demo
-
-# 2. Executar
-./mvnw spring-boot:run     # Linux/Mac
-# ou
-mvnw.cmd spring-boot:run   # Windows
-```
-
-### Acessar
-- **Interface Web**: http://localhost:8080/
-- **API**: http://localhost:8080/api/carros
-- **Documentação (Swagger)**: http://localhost:8080/swagger-ui.html
-
-## Interface do Sistema
-
-### Tela de Carros
-![Gestão de Carros](src/public/img/carros.png)
-
-### Tela de Aluguéis
-![Gestão de Aluguéis](src/public/img/aluguel.png)
-
-### Fluxo de Teste
-1. Acesse a interface web
-2. Cadastre alguns carros na aba "Carros"
-3. Crie aluguéis na aba "Aluguéis" 
-4. Veja os cálculos automáticos
-5. Finalize aluguéis para liberar carros
-
-### Banco de Dados (H2)
-- URL: `jdbc:h2:mem:testdb`
-- Usuário: `sa`
-- Senha: (vazia)
-
-## Comandos Úteis
+<details>
+<summary><strong>⚙️ Comandos Úteis</strong></summary>
 
 ```bash
 # Compilar apenas
@@ -101,8 +122,7 @@ mvnw.cmd spring-boot:run   # Windows
 ./mvnw clean
 ```
 
-## Estrutura do Projeto
-
+### Estrutura do Projeto
 ```
 demo/
 ├── src/main/java/projeto/demo/
@@ -116,3 +136,10 @@ demo/
 └── pom.xml            # Dependências Maven
 ```
 
+</details>
+
+---
+
+<div align="center">
+  <a href="https://github.com/helxysa/aluguel-carro-java">🔗 Repositório no GitHub</a>
+</div>
