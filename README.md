@@ -63,7 +63,15 @@ mvnw.cmd spring-boot:run   # Windows
 ### Acessar
 - **Interface Web**: http://localhost:8080/
 - **API**: http://localhost:8080/api/carros
+- **Documentação (Swagger)**: http://localhost:8080/swagger-ui.html
 
+## Interface do Sistema
+
+### Tela de Carros
+![Gestão de Carros](src/public/img/carros.png)
+
+### Tela de Aluguéis
+![Gestão de Aluguéis](src/public/img/aluguel.png)
 
 ### Fluxo de Teste
 1. Acesse a interface web
